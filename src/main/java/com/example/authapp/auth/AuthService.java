@@ -111,9 +111,10 @@ public class AuthService {
     private Cookie buildCookie(String token, int maxAgeSeconds) {
         Cookie cookie = new Cookie(cookieName, token);
         cookie.setHttpOnly(true);
+        cookie.setSecure(true);
         cookie.setPath("/");
         cookie.setMaxAge(maxAgeSeconds);
-        cookie.setAttribute("SameSite", "Lax");
+        cookie.setAttribute("SameSite", "None");
         return cookie;
     }
 }
