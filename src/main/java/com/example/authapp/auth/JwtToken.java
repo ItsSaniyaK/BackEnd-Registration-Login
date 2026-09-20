@@ -21,7 +21,7 @@ public class JwtToken {
     private Long uid;
 
     @Lob
-    @Column(name = "token", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "token", nullable = false, columnDefinition = "text_content")
     private String token;
 
     @Column(name = "create_at", nullable = false)
